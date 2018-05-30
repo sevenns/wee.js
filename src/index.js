@@ -1,3 +1,6 @@
+var classMethods = require('./class');
+var merge = require('./utils/merge');
+
 function Wee (selector) {
   if (typeof selector === 'string') {
     var collection = document.querySelectorAll(selector);
@@ -33,12 +36,12 @@ Wee.prototype = {
   }
 };
 
+merge(classMethods, Wee.prototype);
+
 function $ (selector) {
   return new Wee(selector);
 }
 
-for (var key in Wee.prototype) {
-  if (Object.prototype.hasOwnProperty.call(Wee.prototype, key)) {
-    $[key] = Wee.prototype[key];
-  }
-}
+merge(Wee.prototype, $);
+
+window.$ = window.Wee = $;

@@ -1,6 +1,6 @@
 {
   "name": "wee.js",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "description": "Small library for DOM manipulating.",
   "directories": {
     "example": "example"
@@ -24,11 +24,16 @@
   },
   "homepage": "https://github.com/sevenns/wee.js#readme",
   "scripts": {
-    "build": "uglifyjs ./src/wee.js -o ./dist/wee.min.js --mangle"
+    "build": "node ./bin/build.js"
   },
   "devDependencies": {
     "eslint": "^4.19.1",
     "eslint-config-es5": "^0.5.0",
-    "uglify-js": "^3.3.28"
+    "eslint-loader": "^2.0.0",
+    "friendly-errors-webpack-plugin": "^1.7.0",
+    "rimraf": "^2.6.2",
+    "webpack": "^4.10.2",
+    "webpack-command": "^0.2.0",
+    "webpack-merge": "^4.1.2"
   }
 }
