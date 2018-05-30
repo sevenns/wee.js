@@ -1,12 +1,12 @@
 {
   "name": "weery",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "Small library for DOM manipulating.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sevenns/weery.js.git"
   },
-  "main": "./dist/weery.min.js",
+  "main": "./dist/weery.min.module.js",
   "keywords": [
     "weery.js",
     "weery",
