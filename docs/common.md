@@ -2,6 +2,6 @@
 
 - **length:**
 ```javascript
-  // Return collection length for $(selector)
-  $(selector).length();
+// Return collection length for $(selector)
+$(selector).length();
 ```

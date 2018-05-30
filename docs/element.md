@@ -2,11 +2,10 @@
 
 - **$:**
 ```javascript
-  // Can use string for selector
-  $('ul');
-
-  // Or some node
-  $(window);
+// Can use string for selector
+$('ul');
+// Or some node
+$(window);
 ```
 
 - **find:**
@@ -17,16 +16,16 @@ $('ul').find('li');
 - **each:**
 ```javascript
 $('ul li').each(function (el, i) {
-	// do something
+  // do something
 });
 ```
 
 - **css:**
 ```javascript
-  $('ul').css('color', 'red');
-
-  $('ul').css({
-    'color': 'red',
-    'background-color': 'yellow'
-  });
+$('ul').css('color', 'red');
+// Or
+$('ul').css({
+  'color': 'red',
+  'background-color': 'yellow'
+});
 ```
