@@ -34,9 +34,4 @@ function $ (selector) {
 
 merge(Weery.prototype, $);
 
-window.$ = window.Weery = $;
-
-module.exports = {
-  $: $,
-  Weery: Weery
-};
+module.exports = $;

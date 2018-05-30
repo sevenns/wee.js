@@ -8,14 +8,11 @@ module.exports = {
   entry: paths.src,
   output: {
     path: paths.dist,
-    filename: 'weery.min.js'
+    filename: 'weery.min.js',
+    libraryTarget: 'commonjs2'
   },
   resolve: {
     extensions: ['.js']
-  },
-  node: {
-    __filename: true,
-    __dirname: true
   },
   module: {
     rules: [

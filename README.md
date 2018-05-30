@@ -16,7 +16,7 @@ Small library for DOM manipulating. Current support: **IE9+**.
 You can setting own collection of necessary methods.
 
 ```bash
-# Clone repositorie and install dependencies
+# Clone repository and install dependencies
 npm install
 
 # setting src/index.js and minimize to dist/
