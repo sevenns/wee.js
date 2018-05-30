@@ -29,3 +29,15 @@ $('ul li').each(function (el, i) {
 ```javascript
 $('ul li').length(); // return collection length
 ```
+
+### - Build setup
+
+You can setting own collection of necessary methods.
+
+```bash
+# Clone repositorie and install dependencies
+npm install
+
+# setting src/wee.js and minimize to dist/
+npm run build
+```

@@ -23,8 +23,12 @@
     "url": "https://github.com/sevenns/wee.js/issues"
   },
   "homepage": "https://github.com/sevenns/wee.js#readme",
+  "scripts": {
+    "build": "uglifyjs ./src/wee.js -o ./dist/wee.min.js --mangle"
+  },
   "devDependencies": {
     "eslint": "^4.19.1",
-    "eslint-config-es5": "^0.5.0"
+    "eslint-config-es5": "^0.5.0",
+    "uglify-js": "^3.3.28"
   }
 }
