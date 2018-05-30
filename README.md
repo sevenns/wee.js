@@ -8,7 +8,6 @@ Small library for DOM manipulating. Current support: **IE9+**.
 - [Classes][class]
 - [Element][element]
 - [Events][event]
-- [Static methods][static]
 - [Common methods][common]
 
 ### - Build setup
@@ -28,4 +27,3 @@ npm run build
 [common]: https://github.com/sevenns/weery.js/blob/master/docs/common.md
 [element]: https://github.com/sevenns/weery.js/blob/master/docs/element.md
 [event]: https://github.com/sevenns/weery.js/blob/master/docs/event.md
-[static]: https://github.com/sevenns/weery.js/blob/master/docs/static.md

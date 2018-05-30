@@ -3,7 +3,6 @@ var classMethods = require('./class');
 var commonMethods = require('./common');
 var elementMethods = require('./element');
 var eventMethods = require('./event');
-var staticMethods = require('./static');
 var merge = require('./utils/merge');
 
 function Weery (selector) {
@@ -26,7 +25,6 @@ merge(classMethods, Weery.prototype);
 merge(commonMethods, Weery.prototype);
 merge(elementMethods, Weery.prototype);
 merge(eventMethods, Weery.prototype);
-merge(staticMethods, Weery.prototype);
 
 function $ (selector) {
   return new Weery(selector);
