@@ -11,7 +11,7 @@ function Wee (selector) {
   }
 
   return this;
-};
+}
 
 Wee.prototype = {
   length: function () {
@@ -38,5 +38,7 @@ function $ (selector) {
 }
 
 for (var key in Wee.prototype) {
-  $[key] = Wee.prototype[key];
+  if (Object.prototype.hasOwnProperty.call(Wee.prototype, key)) {
+    $[key] = Wee.prototype[key];
+  }
 }

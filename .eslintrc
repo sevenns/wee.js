@@ -1,0 +1,15 @@
+{
+  "extends": "eslint-config-es5",
+  "env": {
+    "browser": true
+  },
+  "rules": {
+    "max-len": [1, 80, 2, {
+      "ignoreComments": true
+    }],
+    "linebreak-style": 0,
+    "no-console": 0,
+    "space-before-function-paren": 0,
+    "func-names": 0
+  }
+}

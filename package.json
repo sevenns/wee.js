@@ -22,5 +22,9 @@
   "bugs": {
     "url": "https://github.com/sevenns/wee.js/issues"
   },
-  "homepage": "https://github.com/sevenns/wee.js#readme"
+  "homepage": "https://github.com/sevenns/wee.js#readme",
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-es5": "^0.5.0"
+  }
 }
