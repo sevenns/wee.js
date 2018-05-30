@@ -6,7 +6,7 @@ var eventMethods = require('./event');
 var staticMethods = require('./static');
 var merge = require('./utils/merge');
 
-function Wee (selector) {
+function Weery (selector) {
   if (typeof selector === 'string') {
     var collection = document.querySelectorAll(selector);
 
@@ -21,17 +21,22 @@ function Wee (selector) {
   return this;
 }
 
-merge(attrMethods, Wee.prototype);
-merge(classMethods, Wee.prototype);
-merge(commonMethods, Wee.prototype);
-merge(elementMethods, Wee.prototype);
-merge(eventMethods, Wee.prototype);
-merge(staticMethods, Wee.prototype);
+merge(attrMethods, Weery.prototype);
+merge(classMethods, Weery.prototype);
+merge(commonMethods, Weery.prototype);
+merge(elementMethods, Weery.prototype);
+merge(eventMethods, Weery.prototype);
+merge(staticMethods, Weery.prototype);
 
 function $ (selector) {
-  return new Wee(selector);
+  return new Weery(selector);
 }
 
-merge(Wee.prototype, $);
+merge(Weery.prototype, $);
 
-window.$ = window.Wee = $;
+window.$ = window.Weery = $;
+
+module.exports = {
+  $: $,
+  Weery: Weery
+};

@@ -1,17 +1,15 @@
 {
-  "name": "wee.js",
+  "name": "weery",
   "version": "1.0.13",
   "description": "Small library for DOM manipulating.",
-  "directories": {
-    "example": "example"
-  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sevenns/wee.js.git"
+    "url": "git+https://github.com/sevenns/weery.js.git"
   },
+  "main": "./dist/weery.min.js",
   "keywords": [
-    "wee.js",
-    "wee",
+    "weery.js",
+    "weery",
     "dom",
     "manipulating",
     "small",
@@ -20,9 +18,9 @@
   "author": "alexander sevenns",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/sevenns/wee.js/issues"
+    "url": "https://github.com/sevenns/weery.js/issues"
   },
-  "homepage": "https://github.com/sevenns/wee.js#readme",
+  "homepage": "https://github.com/sevenns/weery.js#readme",
   "scripts": {
     "build": "node ./bin/build.js"
   },
@@ -32,6 +30,7 @@
     "eslint-loader": "^2.0.0",
     "friendly-errors-webpack-plugin": "^1.7.0",
     "rimraf": "^2.6.2",
+    "uglifyjs-webpack-plugin": "^1.2.5",
     "webpack": "^4.10.2",
     "webpack-command": "^0.2.0",
     "webpack-merge": "^4.1.2"

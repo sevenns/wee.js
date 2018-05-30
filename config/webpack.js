@@ -1,5 +1,6 @@
 var webpack = require('webpack');
 var paths = require('./paths');
+var UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 var FriendlyErrors = require('friendly-errors-webpack-plugin');
 
 module.exports = {
@@ -7,7 +8,7 @@ module.exports = {
   entry: paths.src,
   output: {
     path: paths.dist,
-    filename: 'wee.min.js'
+    filename: 'weery.min.js'
   },
   resolve: {
     extensions: ['.js']
@@ -23,6 +24,15 @@ module.exports = {
         exclude: [/node_modules/, paths.dist],
         use: ['eslint-loader']
       }
+    ]
+  },
+  optimization: {
+    minimizer: [
+      new UglifyJsPlugin({
+        cache: true,
+        parallel: true,
+        uglifyOptions: { ecma: 5 }
+      })
     ]
   },
   plugins: [
