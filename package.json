@@ -1,0 +1,26 @@
+{
+  "name": "wee.js",
+  "version": "1.0.0",
+  "description": "Small library for DOM manipulating.",
+  "directories": {
+    "example": "example"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sevenns/wee.js.git"
+  },
+  "keywords": [
+    "wee.js",
+    "wee",
+    "dom",
+    "manipulating",
+    "small",
+    "library"
+  ],
+  "author": "alexander sevenns",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sevenns/wee.js/issues"
+  },
+  "homepage": "https://github.com/sevenns/wee.js#readme"
+}
