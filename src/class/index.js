@@ -36,14 +36,14 @@ module.exports = {
   },
 
   hasClass: function (classes) {
-    var isExists = true;
+    var isExists = false;
 
     this.each(function (el) {
       var classArray = classes.split(' ');
 
       classArray.forEach(function (className) {
-        if (!el.classList.contains(className)) {
-          isExists = false;
+        if (el.classList.contains(className)) {
+          isExists = true;
         }
       });
     });

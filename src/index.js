@@ -1,4 +1,9 @@
+var attrMethods = require('./attr');
 var classMethods = require('./class');
+var commonMethods = require('./common');
+var elementMethods = require('./element');
+var eventMethods = require('./event');
+var staticMethods = require('./static');
 var merge = require('./utils/merge');
 
 function Wee (selector) {
@@ -6,7 +11,7 @@ function Wee (selector) {
     var collection = document.querySelectorAll(selector);
 
     this.collection = Array.prototype.slice.call(collection);
-  } else if (selector.nodeType) {
+  } else {
     this.collection = Array.prototype.slice.call({
       '0': selector,
       length: 1
@@ -16,27 +21,12 @@ function Wee (selector) {
   return this;
 }
 
-Wee.prototype = {
-  length: function () {
-    return this.collection.length;
-  },
-
-  each: function (callback) {
-    Array.prototype.forEach.call(this.collection, callback);
-  },
-
-  on: function (name, handler) {
-    return this.each(function (el) {
-      el.addEventListener(name, handler);
-    });
-  },
-
-  ready: function (callback) {
-    document.addEventListener('DOMContentLoaded', callback);
-  }
-};
-
+merge(attrMethods, Wee.prototype);
 merge(classMethods, Wee.prototype);
+merge(commonMethods, Wee.prototype);
+merge(elementMethods, Wee.prototype);
+merge(eventMethods, Wee.prototype);
+merge(staticMethods, Wee.prototype);
 
 function $ (selector) {
   return new Wee(selector);
