@@ -5,6 +5,29 @@
 
 <p align="center">Small library for DOM manipulating. Current support: <b>IE9+</b>.</p>
 
+### - Installing
+
+``` bash
+npm install weery --save
+```
+
+### - Using
+
+- es6 imports
+``` javascript
+import $ from 'weery'
+```
+
+- commonjs
+``` javascript
+const $ = require('weery');
+```
+
+- as global (download [weery.min.global.js][weery-global] and put before ```</body>```)
+``` html
+<script src="/path/to/scripts/weery.min.global.js"></script>
+```
+
 ### - Availables
 
 - [Attributes][attr]
@@ -24,6 +47,8 @@ npm install
 # setting src/index.js and minimize to dist/
 npm run build
 ```
+
+[weery-global]: https://github.com/sevenns/weery.js/blob/master/dist/weery.min.global.js
 
 [attr]: https://github.com/sevenns/weery.js/blob/master/docs/attr.md
 [class]: https://github.com/sevenns/weery.js/blob/master/docs/class.md
