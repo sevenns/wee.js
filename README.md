@@ -1,6 +1,9 @@
-[![Weery](./weery.png "Weery")](https://github.com/sevenns/weery.js "Weery")
+<p align="center">
+	<a href="https://github.com/sevenns/weery.js" title="Weery"><img src="./logo.png" width="128px"></a>
+	<h3 align="center">Weery.js</h3>
+</p>
 
-Small library for DOM manipulating. Current support: **IE9+**.
+<p align="center">Small library for DOM manipulating. Current support: <b>IE9+</b>.</p>
 
 ### - Availables
 
