@@ -1,4 +1,4 @@
-### - Weery.js
+[![Weery](./weery.png "Weery")](https://github.com/sevenns/weery.js "Weery")
 
 Small library for DOM manipulating. Current support: **IE9+**.
 
