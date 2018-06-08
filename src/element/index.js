@@ -6,22 +6,19 @@ module.exports = {
   },
 
   find: function (selector) {
-    if (!(typeof selector !== 'string')) {
-      var collection = [];
+    var collection = [];
 
+    if (typeof selector === 'string') {
       this.each(function (el) {
         var currentCollection = el.querySelectorAll(selector);
         var array = Array.prototype.slice.call(currentCollection);
 
         collection = collection.concat(array);
       });
-
-      this.collection = this.collection.slice(0, this.length());
-
-      this.collection = collection;
-    } else {
-      this.collection = this.collection.slice(0, this.length());
     }
+
+    this.collection.splice(0, this.length());
+    this.collection = this.collection.concat(collection);
 
     return this;
   },
