@@ -24,17 +24,27 @@ module.exports = {
   },
 
   css: function (key, value) {
+    var result;
+
     if (!value) {
-      this.each(function (el) {
-        merge(key, el.style);
-      });
+      if (typeof key === 'string') {
+        result = this[0] ? this[0].style[key] : undefined;
+      } else {
+        this.each(function (el) {
+          merge(key, el.style);
+        });
+
+        result = this;
+      }
     } else {
       this.each(function (el) {
         el.style[key] = value;
       });
+
+      result = this;
     }
 
-    return this;
+    return result;
   },
 
   text: function (value) {
@@ -99,7 +109,7 @@ module.exports = {
     return this;
   },
 
-  outerHeight: function () {
+  outerHeight: function (isDeep) {
     if (!this[0]) {
       return undefined;
     }
@@ -111,14 +121,17 @@ module.exports = {
     }
 
     var height = el.offsetHeight;
-    var style = getComputedStyle(el);
 
-    height += parseInt(style.marginTop) + parseInt(style.marginBottom);
+    if (isDeep) {
+      var style = getComputedStyle(el);
+
+      height += parseInt(style.marginTop) + parseInt(style.marginBottom);
+    }
 
     return height;
   },
 
-  outerWidth: function () {
+  outerWidth: function (isDeep) {
     if (!this[0]) {
       return undefined;
     }
@@ -130,9 +143,12 @@ module.exports = {
     }
 
     var width = el.offsetWidth;
-    var style = getComputedStyle(el);
 
-    width += parseInt(style.marginLeft) + parseInt(style.marginRight);
+    if (isDeep) {
+      var style = getComputedStyle(el);
+
+      width += parseInt(style.marginLeft) + parseInt(style.marginRight);
+    }
 
     return width;
   },

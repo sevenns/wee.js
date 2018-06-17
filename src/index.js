@@ -31,8 +31,8 @@ function $ (selector) {
 
 merge(Weery.prototype, $);
 
-console.log(process.env);
+module.exports = $;
 
-module.exports.$ = $;
-module.exports.W = $;
-module.exports.Weery = $;
+if (window) {
+  window.$ = window.W = $;
+}
