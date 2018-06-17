@@ -1,6 +1,6 @@
 {
   "name": "weery",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "description": "Small library for DOM manipulating.",
   "repository": {
     "type": "git",

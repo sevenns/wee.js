@@ -100,3 +100,14 @@ $('li').prepend('<div class="block"></div>');
 // Insert html in each li at the end
 $('li').append('<div class="block"></div>');
 ```
+
+- **scrollTop:**
+```javascript
+// Get
+$('li').scrollTop();
+$(window).scrollTop();
+
+// Set
+$('li').scrollTop(100);
+$(window).scrollTop(100);
+```

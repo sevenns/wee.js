@@ -27,7 +27,7 @@ const $ = require('weery');
 ``` html
 <script src="/path/to/scripts/weery.min.global.js"></script>
 <!-- or use CDN -->
-<script src="https://unpkg.com/weery@1.1.6/dist/weery.min.global.js"></script>
+<script src="https://unpkg.com/weery@1.1.7/dist/weery.min.global.js"></script>
 ```
 
 ### - Availables

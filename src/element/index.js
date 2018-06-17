@@ -210,5 +210,27 @@ module.exports = {
     });
 
     return this;
+  },
+
+  scrollTop: function (value) {
+    var el = this[0];
+
+    if (!value) {
+      if (!el) {
+        return undefined;
+      }
+
+      if (el instanceof Window) {
+        return el.pageYOffset;
+      }
+
+      return el.scrollTop;
+    }
+
+    var x = el instanceof Window ? el.pageXOffset : el.scrollLeft;
+
+    el.scrollTo(x, value);
+
+    return this;
   }
 };
