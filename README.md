@@ -27,7 +27,7 @@ const $ = require('weery');
 ``` html
 <script src="/path/to/scripts/weery.min.global.js"></script>
 <!-- or use CDN -->
-<script src="https://unpkg.com/weery@1.0.28/dist/weery.min.global.js"></script>
+<script src="https://unpkg.com/weery@1.1.5/dist/weery.min.global.js"></script>
 ```
 
 ### - Availables
@@ -37,6 +37,10 @@ const $ = require('weery');
 - [Element][element]
 - [Events][event]
 - [Common methods][common]
+
+### - Philosophy
+
+If you don't need jQuery, but you want to use the basic methods to manipulate the DOM, install Weery. And if at some time you really need jQuery, replace Weery with jQuery. All Weery methods copy the jQuery methods (syntax, functional).
 
 ### - Build setup
 
