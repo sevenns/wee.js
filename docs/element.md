@@ -22,12 +22,15 @@ $('ul li').each(function (el, i) {
 
 - **css:**
 ```javascript
+// Set
 $('ul').css('color', 'red');
-// Or
 $('ul').css({
   'color': 'red',
   'background-color': 'yellow'
 });
+
+// Get
+$('ul').css('color');
 ```
 
 - **text:**
@@ -56,18 +59,20 @@ $('li').prev();
 
 - **outerHeight:**
 ```javascript
-// Return height of li (given the margins)
+// Return height of li
 $('li').outerHeight();
-// Return height of window
-$(window).outerHeight();
+
+// Given the margins
+$('li').outerHeight(true);
 ```
 
 - **outerWidth:**
 ```javascript
 // Return width of li (given the margins)
 $('li').outerWidth();
-// Return width of window
-$(window).outerWidth();
+
+// Given the margins
+$('li').outerWidth(true);
 ```
 
 - **remove:**

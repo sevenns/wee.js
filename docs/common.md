@@ -2,8 +2,8 @@
 
 - **length:**
 ```javascript
-// Return collection length for $(selector)
-$(selector).length();
+// Get collection length for $(selector)
+$(selector).length;
 ```
 
 - **parseHTML:**

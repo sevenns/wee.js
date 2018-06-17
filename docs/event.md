@@ -2,39 +2,41 @@
 
 - **ready:**
 ```javascript
-  // Document ready
-  $.ready(function () {
-    // do something
-  });
+// Document ready
+$(document).ready(function () {
+  // do something
+});
+
+// Or shorter
+$().ready(function () {
+  // do something
+});
 ```
 
 - **resize:**
 ```javascript
-  // Window resize
-  $.resize(function () {
-    // do something
-  });
+// Window resize
+$(window).resize(function () {
+  // do something
+});
 ```
 
 - **scroll:**
 ```javascript
-  // Document scroll
-  $.scroll(function () {
-    // do something
-  });
-```
+// Document scroll
+$(document).scroll(function () {
+  // do something
+});
 
-- **load:**
-```javascript
-  // Window load
-  $.load(function () {
-    // do something
-  });
+// Div scroll
+$('div.block').scroll(function () {
+  // do something
+});
 ```
 
 - **on:**
 ```javascript
-  $(selector).on('click', function () {
-    // do something
-  });
+$(selector).on('click', function () {
+  // do something
+});
 ```
