@@ -26,6 +26,8 @@ const $ = require('weery');
 - as global (download [weery.min.global.js][weery-global] and put before ```</body>```)
 ``` html
 <script src="/path/to/scripts/weery.min.global.js"></script>
+<!-- or use CDN -->
+<script src="https://unpkg.com/weery@1.0.28/dist/weery.min.global.js"></script>
 ```
 
 ### - Availables
