@@ -1,7 +1,7 @@
 module.exports = {
   attr: function (name, value) {
-    if (!value) {
-      return this.collection[0].getAttribute(name);
+    if (!value && this[0]) {
+      return this[0].getAttribute(name);
     }
 
     this.each(function (el) {

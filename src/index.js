@@ -4,17 +4,16 @@ var commonMethods = require('./common');
 var elementMethods = require('./element');
 var eventMethods = require('./event');
 var merge = require('./utils/merge');
+var makeArray = require('./utils/makeArray');
 
 function Weery (selector) {
   if (typeof selector === 'string') {
     var collection = document.querySelectorAll(selector);
 
-    this.collection = Array.prototype.slice.call(collection);
+    makeArray(collection, this);
   } else {
-    this.collection = Array.prototype.slice.call({
-      '0': selector,
-      length: 1
-    });
+    this['0'] = selector;
+    this.length = 1;
   }
 
   return this;
@@ -32,4 +31,8 @@ function $ (selector) {
 
 merge(Weery.prototype, $);
 
-module.exports = $;
+console.log(process.env);
+
+module.exports.$ = $;
+module.exports.W = $;
+module.exports.Weery = $;

@@ -43,7 +43,6 @@ var global = Object.assign({}, config, {
   output: {
     path: paths.dist,
     filename: 'weery.min.global.js',
-    library: '$',
     libraryTarget: 'global'
   }
 });

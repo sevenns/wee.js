@@ -1,8 +1,4 @@
 module.exports = {
-  length: function () {
-    return this.collection.length;
-  },
-
   parseHTML: function (value) {
     var tmp = document.implementation.createHTMLDocument();
 

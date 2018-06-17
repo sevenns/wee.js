@@ -1,8 +1,9 @@
 var merge = require('../utils/merge');
+var makeArray = require('../utils/makeArray');
 
 module.exports = {
   each: function (callback) {
-    Array.prototype.forEach.call(this.collection, callback);
+    Array.prototype.forEach.call(this, callback);
   },
 
   find: function (selector) {
@@ -17,8 +18,7 @@ module.exports = {
       });
     }
 
-    this.collection.splice(0, this.length());
-    this.collection = this.collection.concat(collection);
+    makeArray(collection, this);
 
     return this;
   },
@@ -56,8 +56,8 @@ module.exports = {
   },
 
   html: function (value) {
-    if (!value) {
-      return this.collection[0].innerHTML;
+    if (!value && this[0]) {
+      return this[0].innerHTML;
     }
 
     this.each(function (el) {
@@ -78,9 +78,7 @@ module.exports = {
       }
     });
 
-    this.collection = this.collection.slice(0, this.length());
-
-    this.collection = collection;
+    makeArray(collection, this);
 
     return this;
   },
@@ -96,15 +94,17 @@ module.exports = {
       }
     });
 
-    this.collection = this.collection.slice(0, this.length());
-
-    this.collection = collection;
+    makeArray(collection, this);
 
     return this;
   },
 
   outerHeight: function () {
-    var el = this.collection[0];
+    if (!this[0]) {
+      return undefined;
+    }
+
+    var el = this[0];
 
     if (el instanceof Window) {
       return el.innerHeight;
@@ -119,7 +119,11 @@ module.exports = {
   },
 
   outerWidth: function () {
-    var el = this.collection[0];
+    if (!this[0]) {
+      return undefined;
+    }
+
+    var el = this[0];
 
     if (el instanceof Window) {
       return el.innerWidth;
@@ -142,7 +146,11 @@ module.exports = {
   },
 
   offset: function () {
-    var el = this.collection[0];
+    if (!this[0]) {
+      return undefined;
+    }
+
+    var el = this[0];
     var rect = el.getBoundingClientRect();
 
     return {
@@ -152,7 +160,11 @@ module.exports = {
   },
 
   position: function () {
-    var el = this.collection[0];
+    if (!this[0]) {
+      return undefined;
+    }
+
+    var el = this[0];
 
     return {
       top: el.offsetTop,
